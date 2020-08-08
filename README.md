@@ -54,7 +54,7 @@
 # 思路
 ```
   logagent
-  0. 首先要在 etcd 中存储 key 与 json（ logpath topic）的内容
+  0. 首先要在 etcd 中存储 key 与 json（ logpath topic）的内容 （ 可利用demo包中的 etcd_put 存入数据)
   1. 首先从 ini 读取 etcd kafka 配置信息（地址，etcd key）
   2. 初始化连接，读取 etcd 中 key 对应的日志路径 path，利用 tail 包读取日志内容，异步通信方式将其写入到 kafka 对应的 topic 中
  
